@@ -9,7 +9,7 @@ class Main extends React.Component {
   render() {
     return (
       <main>
-        <UserPage />
+        <UserPage isGrid={this.props.isGrid} />
       </main>
     );
   }

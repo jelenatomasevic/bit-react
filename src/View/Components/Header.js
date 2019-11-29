@@ -1,21 +1,26 @@
 import React from "react";
 
-const Header = () => {
+const Header = props => {
   return (
     <nav>
-      <div className="container nav-wrapper">
-        <a href="#" className="brand-logo">
-          Logo
+      <div class="nav-wrapper">
+        <a href="#!" class="center brand-logo">
+          BIT PERSON
         </a>
-        <ul id="nav-mobile" className="right  hide-on-med-and-down">
+        <ul class="right hide-on-med-and-down">
           <li>
-            <a href="sass.html">Sass</a>
+            <a href="sass.html">About</a>
+          </li>
+
+          <li>
+            <a onClick={props.isRefreshed} href="collapsible.html">
+              <i class="material-icons">refresh</i>
+            </a>
           </li>
           <li>
-            <a href="badges.html">Components</a>
-          </li>
-          <li>
-            <a href="collapsible.html">JavaScript</a>
+            <a onClick={props.onChangeLayout}>
+              <i class="material-icons">view_module</i>
+            </a>
           </li>
         </ul>
       </div>

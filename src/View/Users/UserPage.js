@@ -1,6 +1,8 @@
 import React from "react";
 import UserList from "./UserList";
 import { fetchUser } from "../service/ServiceUser";
+import UserCard from "./UserCard";
+import Header from "../Components/Header";
 
 class UserPage extends React.Component {
   constructor(props) {
@@ -11,18 +13,16 @@ class UserPage extends React.Component {
     };
   }
 
-  loadUsers() {
+  componentDidMount() {
     fetchUser().then(user => this.setState({ users: user }));
   }
-  /*
- componentDidMount() {
-    fetchUser().then(user => this.setState({ users: user }));
-  }*/
 
   render() {
+    if (this.props.isGrid) {
+      return <UserCard users={this.state.users} />;
+    }
     return (
       <div>
-        <button onClick={() => this.loadUsers()}>Click</button>
         <UserList users={this.state.users} />
       </div>
     );

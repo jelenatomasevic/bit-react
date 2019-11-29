@@ -7,7 +7,7 @@ const UserListitem = props => {
       <img src={props.user.picture} alt="" class="circle" />
       <span class="title">Name: {props.user.fullName()}</span>
       <p>
-        Email: {props.user.email}
+        Email: {props.user.getEmail()}
         <br />
         Birthday: {props.user.getDate()} <br />
       </p>
