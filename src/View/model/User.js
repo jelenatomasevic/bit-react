@@ -7,9 +7,13 @@ class User {
     this.birthday = new Date(userData.dob.date);
     this.picture = userData.picture.thumbnail;
     this.pictureM = userData.picture.large;
+    this.gender = userData.gender;
   }
   fullName() {
     return this.name + " " + this.lastname;
+  }
+  getFullName() {
+    return this.fullName().toLowerCase();
   }
   getDate() {
     return (

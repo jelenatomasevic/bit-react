@@ -21,3 +21,9 @@ code {
 main {
   flex: 1 0 auto;
 }
+.collection-item.avatar.female {
+  background-color: rgb(228, 169, 169);
+}
+.card.female {
+  background-color: rgb(228, 169, 169);
+}

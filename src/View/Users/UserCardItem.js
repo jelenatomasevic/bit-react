@@ -1,9 +1,12 @@
 import React from "react";
+import User from "../model/User";
 
 const UserCarditem = props => {
+  const gender = props.user.gender;
+
   return (
     <div class="col s12 m4">
-      <div class="card">
+      <div class={`card ${gender}`}>
         <div class="card-image">
           <img src={props.user.pictureM} />
           <span class="card-title"> {props.user.fullName()}</span>

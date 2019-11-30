@@ -11,17 +11,6 @@ const Header = props => {
           <li>
             <a href="sass.html">About</a>
           </li>
-
-          <li>
-            <a onClick={props.isRefreshed} href="collapsible.html">
-              <i class="material-icons">refresh</i>
-            </a>
-          </li>
-          <li>
-            <a onClick={props.onChangeLayout}>
-              <i class="material-icons">view_module</i>
-            </a>
-          </li>
         </ul>
       </div>
     </nav>
